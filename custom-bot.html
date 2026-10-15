@@ -1,0 +1,392 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <title>Custom Bot | MDZ Bots</title>
+
+    .price-notice {
+    background: rgba(22, 139, 255, 0.08);
+    border: 1px solid rgba(22, 139, 255, 0.35);
+    border-radius: 10px;
+    padding: 18px;
+    color: #b8c7da;
+    line-height: 1.6;
+}
+
+.price-notice strong {
+    color: white;
+}
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        body {
+            background: #070b14;
+            color: white;
+            font-family: Arial, Helvetica, sans-serif;
+        }
+
+        nav {
+            height: 75px;
+            display: flex;
+            align-items: center;
+            justify-content: space-between;
+            padding: 0 7%;
+            border-bottom: 1px solid #1c2638;
+            background: #090e19;
+        }
+
+        .logo {
+            font-size: 25px;
+            font-weight: bold;
+            letter-spacing: 2px;
+            text-decoration: none;
+            color: white;
+        }
+
+        .logo span {
+            color: #168bff;
+        }
+
+        .nav-links {
+            display: flex;
+            gap: 30px;
+        }
+
+        .nav-links a {
+            color: #b8c2d3;
+            text-decoration: none;
+        }
+
+        .nav-links a:hover {
+            color: white;
+        }
+
+        .page-header {
+            text-align: center;
+            padding: 80px 20px 40px;
+        }
+
+        .page-header h1 {
+            font-size: 48px;
+            margin-bottom: 15px;
+        }
+
+        .page-header h1 span {
+            color: #168bff;
+        }
+
+        .page-header p {
+            color: #9ba8bc;
+            font-size: 18px;
+        }
+
+        .form-container {
+            max-width: 750px;
+            margin: 20px auto 100px;
+            background: #0d1421;
+            border: 1px solid #1e2a3d;
+            border-radius: 18px;
+            padding: 35px;
+        }
+
+        .form-group {
+            margin-bottom: 25px;
+        }
+
+        label {
+            display: block;
+            margin-bottom: 9px;
+            font-weight: bold;
+        }
+
+        input,
+        textarea {
+            width: 100%;
+            background: #090e19;
+            border: 1px solid #28364c;
+            color: white;
+            padding: 14px;
+            border-radius: 9px;
+            font-size: 16px;
+        }
+
+        input:focus,
+        textarea:focus {
+            outline: none;
+            border-color: #168bff;
+        }
+
+        textarea {
+            min-height: 130px;
+            resize: vertical;
+        }
+
+        .features {
+            display: grid;
+            grid-template-columns: repeat(2, 1fr);
+            gap: 12px;
+        }
+
+        .feature-option {
+            background: #090e19;
+            border: 1px solid #28364c;
+            padding: 14px;
+            border-radius: 9px;
+        }
+
+        .feature-option input {
+            width: auto;
+            margin-right: 8px;
+        }
+
+        .submit-button {
+            width: 100%;
+            border: none;
+            background: #168bff;
+            color: white;
+            padding: 16px;
+            border-radius: 10px;
+            font-size: 16px;
+            font-weight: bold;
+            cursor: pointer;
+        }
+
+        .submit-button:hover {
+            transform: translateY(-2px);
+        }
+
+        .notice {
+            color: #7f8da3;
+            font-size: 13px;
+            text-align: center;
+            margin-top: 15px;
+        }
+
+        footer {
+            text-align: center;
+            padding: 30px;
+            color: #68758a;
+            border-top: 1px solid #1c2638;
+        }
+
+        @media (max-width: 700px) {
+            .nav-links {
+                display: none;
+            }
+
+            .features {
+                grid-template-columns: 1fr;
+            }
+
+            .page-header h1 {
+                font-size: 36px;
+            }
+
+            .form-container {
+                margin: 20px 15px 70px;
+            }
+        }
+    </style>
+</head>
+
+<body>
+
+    <nav>
+        <a href="index.html" class="logo">
+            MDZ <span>BOTS</span>
+        </a>
+
+        <div class="nav-links">
+            <a href="index.html">Home</a>
+
+            <a href="https://discord.gg/WzQwJwTrp"
+               target="_blank">
+                Join Discord
+            </a>
+        </div>
+    </nav>
+
+
+    <section class="page-header">
+        <h1>Build Your <span>Custom Bot.</span></h1>
+
+        <p>
+            Tell us what your Discord server needs.
+            We'll help turn your idea into a custom bot.
+        </p>
+    </section>
+
+
+    <div class="form-container">
+
+        <form id="botRequestForm"></form>
+
+            <div class="form-group">
+                <label>Discord Username</label>
+                <input
+    type="text"
+    name="discordUsername"
+    placeholder="Your Discord username"
+    required
+>
+            </div>
+
+            <div class="form-group">
+                <label>Bot Name</label>
+                <input
+    type="text"
+    name="botName"
+    placeholder="What would you like your bot to be called?"
+>
+            </div>
+
+            <div class="form-group">
+                <label>What is your bot for?</label>
+                <textarea
+    name="botPurpose"
+    placeholder="Tell us about your server and what you want the bot to do..."
+    required
+></textarea>
+            </div>
+
+
+            <div class="form-group">
+
+                <label>Features you're interested in</label>
+
+                <div class="features">
+
+                    <label class="feature-option">
+                      <input type="checkbox" name="features" value="Ticket System">  
+                        🎫 Ticket System
+                    </label>
+
+                    <label class="feature-option">
+                        <input type="checkbox" name="features" value="Welcome System">
+                        👋 Welcome System
+                    </label>
+
+                    <label class="feature-option">
+                        <input type="checkbox" name="features" value="Moderation">
+                        🛡️ Moderation
+                    </label>
+
+                    <label class="feature-option">
+                        <input type="checkbox" name="features" value="Custom Commands">
+                        ⚙️ Custom Commands
+                    </label>
+
+                    <label class="feature-option">
+                        <input type="checkbox" name="features" value="Game Update Tracker">
+                        🎮 Game Update Tracker
+                    </label>
+
+                    <label class="feature-option">
+                        <input type="checkbox" name="features" value="Other / Custom Feature">
+                        🔧 Other / Custom Feature
+                    </label>
+
+                </div>
+
+            </div>
+
+    <div class="form-group">
+    <div class="price-notice">
+        💰 <strong>Pricing</strong><br>
+        The price of your custom bot will vary depending on
+        the features, complexity, and requirements of your project.
+        We'll discuss the final price with you before development begins.
+    </div>
+</div>
+            <div class="form-group">
+                <label>Anything else?</label>
+
+                <textarea
+    name="extraNotes"
+    placeholder="Extra features, ideas, questions, budget, etc."
+></textarea>
+            </div>
+
+
+<button
+    type="button"
+    class="submit-button"
+    onclick="submitBotRequest()">
+    🚀 Submit Bot Request
+</button>
+           <div class="notice">
+    After submitting, you'll be redirected to the MDZ Bots Discord
+    to continue your request.
+</div> 
+        </form>
+
+    </div>
+
+
+    <footer>
+        © 2026 MDZ Bots
+    </footer>
+
+<script>
+    async function submitBotRequest() {
+        const form = document.getElementById("botRequestForm");
+        const formData = new FormData(form);
+
+        const discordUsername = document.querySelector('[name="discordUsername"]').value.trim();
+        const botName = formData.get("botName") || "Not specified";
+        const botPurpose = document.querySelector('[name="botPurpose"]').value.trim();
+        const extraNotes = formData.get("extraNotes") || "None";
+        const features = formData.getAll("features");
+
+        if (!discordUsername || !botPurpose) {
+            alert("Please enter your Discord username and tell us what your bot is for.");
+            return;
+        }
+
+        const request = `
+MDZ CUSTOM BOT REQUEST
+
+Discord Username: ${discordUsername}
+Bot Name: ${botName}
+
+BOT PURPOSE:
+${botPurpose}
+
+FEATURES:
+${features.length > 0 ? features.join(", ") : "None selected"}
+
+EXTRA NOTES:
+${extraNotes}
+        `.trim();
+
+        try {
+            await navigator.clipboard.writeText(request);
+
+            alert(
+                "Your bot request has been copied! 🚀\n\n" +
+                "You will now be sent to the MDZ Bots Discord.\n" +
+                "Open a Custom Bot ticket and paste your request."
+            );
+
+            window.open(
+                "https://discord.gg/WzQwJwTrp",
+                "_blank"
+            );
+
+        } catch (error) {
+            console.error(error);
+
+            alert(
+                "Your request is ready, but it couldn't be copied automatically."
+            );
+        }
+    }
+</script>
+</body>
+</html>
