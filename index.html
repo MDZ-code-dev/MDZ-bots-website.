@@ -1,0 +1,386 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <title>MDZ Bots</title>
+
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        html {
+            scroll-behavior: smooth;
+        }
+
+        body {
+            background: #070b14;
+            color: white;
+            font-family: Arial, Helvetica, sans-serif;
+        }
+
+        /* NAVBAR */
+
+        nav {
+            height: 75px;
+            display: flex;
+            align-items: center;
+            justify-content: space-between;
+            padding: 0 7%;
+            border-bottom: 1px solid #1c2638;
+            background: #090e19;
+        }
+
+        .logo {
+            font-size: 25px;
+            font-weight: bold;
+            letter-spacing: 2px;
+        }
+
+        .logo span {
+            color: #168bff;
+        }
+
+        .nav-links {
+            display: flex;
+            gap: 30px;
+        }
+
+        .nav-links a {
+            color: #b8c2d3;
+            text-decoration: none;
+            font-size: 15px;
+        }
+
+        .nav-links a:hover {
+            color: white;
+        }
+
+        /* HERO */
+
+        .hero {
+            min-height: 620px;
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            align-items: center;
+            text-align: center;
+            padding: 80px 20px;
+            background:
+                radial-gradient(
+                    circle at center,
+                    rgba(22, 139, 255, 0.18),
+                    transparent 45%
+                );
+        }
+
+        .badge {
+            color: #69b7ff;
+            background: rgba(22, 139, 255, 0.12);
+            border: 1px solid rgba(22, 139, 255, 0.35);
+            padding: 8px 16px;
+            border-radius: 30px;
+            margin-bottom: 25px;
+            font-size: 14px;
+        }
+
+        .hero h1 {
+            max-width: 850px;
+            font-size: 64px;
+            line-height: 1.05;
+        }
+
+        .hero h1 span {
+            color: #168bff;
+        }
+
+        .hero p {
+            max-width: 650px;
+            color: #9ba8bc;
+            font-size: 19px;
+            line-height: 1.6;
+            margin-top: 25px;
+        }
+
+        .hero-buttons {
+            display: flex;
+            gap: 15px;
+            margin-top: 35px;
+        }
+
+        .button {
+            display: inline-block;
+            padding: 15px 25px;
+            border-radius: 10px;
+            text-decoration: none;
+            font-weight: bold;
+            transition: 0.2s;
+        }
+
+        .primary {
+            background: #168bff;
+            color: white;
+        }
+
+        .secondary {
+            color: white;
+            border: 1px solid #344157;
+            background: #101725;
+        }
+
+        .button:hover {
+            transform: translateY(-3px);
+        }
+
+        /* FEATURES */
+
+        .features-section {
+            padding: 100px 7%;
+            background: #090e19;
+        }
+
+        .section-title {
+            text-align: center;
+            margin-bottom: 55px;
+        }
+
+        .section-title h2 {
+            font-size: 38px;
+            margin-bottom: 12px;
+        }
+
+        .section-title p {
+            color: #8996aa;
+        }
+
+        .features {
+            max-width: 1100px;
+            margin: auto;
+            display: grid;
+            grid-template-columns: repeat(3, 1fr);
+            gap: 22px;
+        }
+
+        .feature-card {
+            background: #0d1421;
+            border: 1px solid #1e2a3d;
+            border-radius: 16px;
+            padding: 30px;
+            transition: 0.25s;
+        }
+
+        .feature-card:hover {
+            transform: translateY(-5px);
+            border-color: #168bff;
+        }
+
+        .feature-icon {
+            font-size: 35px;
+            margin-bottom: 20px;
+        }
+
+        .feature-card h3 {
+            margin-bottom: 10px;
+            font-size: 20px;
+        }
+
+        .feature-card p {
+            color: #8996aa;
+            line-height: 1.6;
+            font-size: 15px;
+        }
+
+        /* CUSTOM BOT */
+
+        .custom-section {
+            padding: 110px 20px;
+            text-align: center;
+            background:
+                radial-gradient(
+                    circle at center,
+                    rgba(22, 139, 255, 0.12),
+                    transparent 45%
+                );
+        }
+
+        .custom-section h2 {
+            font-size: 42px;
+            margin-bottom: 18px;
+        }
+
+        .custom-section p {
+            color: #9ba8bc;
+            max-width: 600px;
+            margin: 0 auto 30px;
+            line-height: 1.6;
+        }
+
+        /* FOOTER */
+
+        footer {
+            padding: 35px 7%;
+            border-top: 1px solid #1c2638;
+            color: #68758a;
+            display: flex;
+            justify-content: space-between;
+        }
+
+        /* MOBILE */
+
+        @media (max-width: 800px) {
+
+            .nav-links {
+                display: none;
+            }
+
+            .hero h1 {
+                font-size: 43px;
+            }
+
+            .hero-buttons {
+                flex-direction: column;
+                width: 100%;
+                max-width: 300px;
+            }
+
+            .features {
+                grid-template-columns: 1fr;
+            }
+
+            footer {
+                flex-direction: column;
+                gap: 10px;
+                text-align: center;
+            }
+        }
+    </style>
+</head>
+
+<body>
+
+    <nav>
+        <div class="logo">
+            MDZ <span>BOTS</span>
+        </div>
+
+        <div class="nav-links">
+            <a href="#">Home</a>
+            <a href="#features">MDZ Utility</a>
+            <a href="#custom">Custom Bots</a>
+            <a href="#">Support</a>
+        </div>
+    </nav>
+
+
+    <section class="hero">
+
+        <div class="badge">
+            ⚡ Built for Discord communities
+        </div>
+
+        <h1>
+            Power up your
+            <span>Discord server.</span>
+        </h1>
+
+        <p>
+            Powerful tools. Simple setup. Built by MDZ.
+            Give your community the features it deserves
+            with MDZ Utility.
+        </p>
+
+        <div class="hero-buttons">
+
+        <a href="https://discord.com/oauth2/authorize?client_id=1558255894062702695&scope=bot%20applications.commands&permissions=8"
+   class="button primary"
+   target="_blank">
+    🤖 Add MDZ Utility
+</a>
+            <a href="#features" class="button secondary">
+                Explore Features
+            </a>
+
+        </div>
+
+    </section>
+
+
+    <section class="features-section" id="features">
+
+        <div class="section-title">
+            <h2>Everything your server needs.</h2>
+            <p>
+                MDZ Utility brings powerful tools together
+                in one Discord bot.
+            </p>
+        </div>
+
+        <div class="features">
+
+            <div class="feature-card">
+                <div class="feature-icon">🎫</div>
+                <h3>Ticket System</h3>
+                <p>
+                    Give members an easy way to contact
+                    your staff with organized support tickets.
+                </p>
+            </div>
+
+            <div class="feature-card">
+                <div class="feature-icon">👋</div>
+                <h3>Welcome System</h3>
+                <p>
+                    Automatically welcome new members
+                    with clean, customized welcome messages.
+                </p>
+            </div>
+
+            <div class="feature-card">
+                <div class="feature-icon">🎮</div>
+                <h3>Game Updates</h3>
+                <p>
+                    Keep your community informed about
+                    game updates and announcements.
+                </p>
+            </div>
+
+        </div>
+
+    </section>
+
+
+    <section class="custom-section" id="custom">
+
+        <h2>Need something custom?</h2>
+
+        <p>
+            Every Discord community is different.
+            MDZ can build a custom bot designed specifically
+            around the features your server needs.
+        </p>
+
+        <a href="#" class="button primary">
+            🛠️ Build My Bot
+        </a>
+
+    </section>
+
+
+    <footer>
+
+        <div>
+            © 2026 MDZ Bots
+        </div>
+
+        <div>
+            Built for Discord.
+        </div>
+
+    </footer>
+
+</body>
+</html>
