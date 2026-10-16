@@ -36,10 +36,17 @@
         }
 
         .logo {
-            font-size: 25px;
-            font-weight: bold;
-            letter-spacing: 2px;
-        }
+            display: flex;
+            align-items: center;
+            text-decoration: none;
+}
+
+        .logo img {
+            height: 50px;
+            width: 50px;
+            object-fit: cover;
+            border-radius: 12px;
+}
 
         .logo span {
             color: #168bff;
@@ -263,9 +270,9 @@
 <body>
 
     <nav>
-        <div class="logo">
-            MDZ <span>BOTS</span>
-        </div>
+     <a href="index.html" class="logo">
+    <img src="images/mdz-logo.png" alt="MDZ Bots Logo">
+</a>   
 
         <div class="nav-links">
             <a href="#">Home</a>
