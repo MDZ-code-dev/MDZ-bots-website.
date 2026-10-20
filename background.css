@@ -1,5 +1,8 @@
 /* Shared background: keep decorative layers behind every page control. */
 body {
+    color: #ffffff;
+    font-family: "gg sans", "Noto Sans", "Helvetica Neue", "Segoe UI", Helvetica, Arial, sans-serif;
+    line-height: 1.5;
     min-height: 100vh;
     position: relative;
     isolation: isolate;
@@ -28,4 +31,14 @@ footer {
 }
 @media (prefers-reduced-motion: reduce) {
     html { scroll-behavior: auto; }
+}
+
+/* Native controls otherwise use a separate browser font. */
+button, input, textarea, select {
+    font: inherit;
+    color: #ffffff;
+}
+input::placeholder, textarea::placeholder {
+    color: #c4c9d4;
+    opacity: 1;
 }
