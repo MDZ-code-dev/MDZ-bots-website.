@@ -17,121 +17,6 @@
             scroll-behavior: smooth;
         }
 
-body {
-    background:
-        radial-gradient(circle at 20% 20%, rgba(40, 90, 160, 0.22), transparent 30%),
-        radial-gradient(circle at 80% 25%, rgba(0, 140, 255, 0.14), transparent 28%),
-        radial-gradient(circle at 50% 75%, rgba(20, 60, 130, 0.18), transparent 35%),
-        linear-gradient(180deg, #030712 0%, #07111f 45%, #040914 100%);
-    color: white;
-    font-family: Arial, Helvetica, sans-serif;
-    position: relative;
-    overflow-x: hidden;
-}
-body::before {
-    content: "";
-    position: fixed;
-    inset: 0;
-    pointer-events: none;
-    z-index: 0;
-
-    background-image:
-        radial-gradient(2px 2px at 10% 20%, rgba(255,255,255,0.9), transparent 50%),
-        radial-gradient(1.5px 1.5px at 25% 80%, rgba(255,255,255,0.7), transparent 50%),
-        radial-gradient(2px 2px at 40% 35%, rgba(255,255,255,0.8), transparent 50%),
-        radial-gradient(1.5px 1.5px at 60% 70%, rgba(255,255,255,0.65), transparent 50%),
-        radial-gradient(2px 2px at 75% 15%, rgba(255,255,255,0.8), transparent 50%),
-        radial-gradient(1.5px 1.5px at 90% 55%, rgba(255,255,255,0.7), transparent 50%);
-
-    opacity: 0.5;
-}
-body::after {   
-    content: "";
-    position: fixed;
-    inset: 0;
-    pointer-events: none;
-    z-index: 0;
-
-    background:
-        radial-gradient(
-            circle at 20% 30%,
-            rgba(30, 100, 255, 0.16),
-            transparent 32%
-        ),
-        radial-gradient(
-            circle at 80% 65%,
-            rgba(0, 170, 255, 0.10),
-            transparent 30%
-        );
-
-    filter: blur(50px);
-    animation: spaceGlow 12s ease-in-out infinite alternate;
-}
-
-@keyframes spaceGlow {
-    0% {
-        transform: scale(1) translate(0, 0);
-        opacity: 0.75;
-    }
-
-    100% {
-        transform: scale(1.08) translate(-2%, 2%);
-        opacity: 1;
-    }
-}
-
-@keyframes starDrift {
-    from {
-        transform: translateY(0);
-    }
-
-    to {
-        transform: translateY(-40px);
-    }
-}
-
-body::before {
-    content: "";
-    position: fixed;
-    inset: 0;
-    pointer-events: none;
-    background-image:
-    linear-gradient(rgba(80, 150, 255, 0.025) 1px, transparent 1px),
-linear-gradient(90deg, rgba(80, 150, 255, 0.025) 1px, transparent 1px),
-        radial-gradient(2px 2px at 10% 20%, rgba(255,255,255,0.8), transparent 50%),
-        radial-gradient(1.5px 1.5px at 25% 80%, rgba(255,255,255,0.6), transparent 50%),
-        radial-gradient(2px 2px at 40% 35%, rgba(255,255,255,0.7), transparent 50%),
-        radial-gradient(1.5px 1.5px at 60% 70%, rgba(255,255,255,0.6), transparent 50%),
-        radial-gradient(2px 2px at 75% 15%, rgba(255,255,255,0.75), transparent 50%),
-        radial-gradient(1.5px 1.5px at 90% 55%, rgba(255,255,255,0.6), transparent 50%);
-       
-        background-size:
-    70px 70px,
-    70px 70px,
-    auto,
-    auto,
-    auto,
-    auto,
-    auto,
-    auto;
-    mask-image: radial-gradient(circle at center, black 35%, transparent 85%);
--webkit-mask-image: radial-gradient(circle at center, black 35%, transparent 85%);
-    opacity: 0.45;
-    z-index: 0;
-    animation: starDrift 45s linear infinite;
-}
-
-body::after {
-    content: "";
-    position: fixed;
-    inset: 0;
-    pointer-events: none;
-    background:
-        radial-gradient(circle at center, rgba(30, 90, 180, 0.10), transparent 45%);
-    filter: blur(40px);
-    z-index: 0;
-}
-
         /* NAVBAR */
 
 nav {
@@ -462,14 +347,9 @@ nav {
             }
         }
     </style>
-    nav,
-.features-section,
-.custom-section,
-footer {
-    position: relative;
-    z-index: 1;
-}
 
+    <link rel="stylesheet" href="background.css">
+    <script src="background.js" defer></script>
 </head>
 
 <body>

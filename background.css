@@ -1,0 +1,31 @@
+/* Shared background: keep decorative layers behind every page control. */
+body {
+    min-height: 100vh;
+    position: relative;
+    isolation: isolate;
+    background: #060910;
+    background-image: radial-gradient(ellipse at 50% 0%, #102039 0%, transparent 65%);
+}
+#network-background {
+    position: fixed;
+    inset: 0;
+    width: 100%;
+    height: 100%;
+    z-index: -1;
+    pointer-events: none;
+}
+.hero, .custom-section {
+    background: transparent;
+}
+.hero::before {
+    content: none;
+}
+nav {
+    background: rgba(8, 13, 23, 0.9);
+}
+footer {
+    position: relative;
+}
+@media (prefers-reduced-motion: reduce) {
+    html { scroll-behavior: auto; }
+}
