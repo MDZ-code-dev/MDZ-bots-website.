@@ -43,14 +43,14 @@
         particles.forEach((p, i) => {
             for (let j = i + 1; j < particles.length; j++) {
                 const q = particles[j];
-                line(p, q, Math.hypot(p.x - q.x, p.y - q.y), 155, 0.24);
+                line(p, q, Math.hypot(p.x - q.x, p.y - q.y), 185, 0.24);
             }
             if (!motion.matches) {
-                line(p, pointer, Math.hypot(p.x - pointer.x, p.y - pointer.y), 190, 0.45);
+                line(p, pointer, Math.hypot(p.x - pointer.x, p.y - pointer.y), 225, 0.45);
             }
             ctx.fillStyle = 'rgba(118, 184, 255, 0.6)';
             ctx.beginPath();
-            ctx.arc(p.x, p.y, 1.5, 0, Math.PI * 2);
+            ctx.arc(p.x, p.y, 2, 0, Math.PI * 2);
             ctx.fill();
         });
     }
