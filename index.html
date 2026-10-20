@@ -285,6 +285,13 @@ nav {
             font-size: 15px;
         }
 
+        .feature-card .feature-commands {
+            margin-top: 18px;
+            color: #a8d4ff;
+            font-size: 13px;
+            overflow-wrap: anywhere;
+        }
+
         /* CUSTOM BOT */
 
 .custom-section {
@@ -440,39 +447,59 @@ nav {
         <div class="features">
 
             <div class="feature-card">
-                <div class="feature-icon">🎫</div>
+                <div class="feature-icon" aria-hidden="true">🎫</div>
                 <h3>Ticket System</h3>
-                <p>
-                    Give members an easy way to contact
-                    your staff with organized support tickets.
-                </p>
+                <p>Open private support tickets for custom bot requests, general support, bug reports, and user reports. Staff can claim and close tickets.</p>
+                <p class="feature-commands">/ticket panel</p>
             </div>
 
             <div class="feature-card">
-                <div class="feature-icon">👋</div>
-                <h3>Welcome System</h3>
-                <p>
-                    Automatically welcome new members
-                    with clean, customized welcome messages.
-                </p>
+                <div class="feature-icon" aria-hidden="true">👋</div>
+                <h3>Welcome Messages</h3>
+                <p>Greet new members with a welcome embed, their avatar, and the server member count in your chosen channel.</p>
+                <p class="feature-commands">/setwelcome</p>
             </div>
 
             <div class="feature-card">
-                <div class="feature-icon">🎮</div>
-                <h3>Game Updates</h3>
-                <p>
-                    Keep your community informed about
-                    game updates and announcements.
-                </p>
+                <div class="feature-icon" aria-hidden="true">🎮</div>
+                <h3>Animal Company Updates</h3>
+                <p>Send Animal Company update announcements to a selected channel and check the latest update on demand.</p>
+                <p class="feature-commands">/setacupdates · /acstatus</p>
             </div>
 
             <div class="feature-card">
-                <div class="feature-icon">🛡️</div>
-                <h3>moderation tools</h3>
-                <p>
-                    kick, ban, timeout, and more.
-                    
-                </p>
+                <div class="feature-icon" aria-hidden="true">🛡️</div>
+                <h3>Moderation Tools</h3>
+                <p>Keep your community in check with member kicks, bans, and timed timeouts, with reasons and permission checks.</p>
+                <p class="feature-commands">/kick · /ban · /timeout</p>
+            </div>
+
+            <div class="feature-card">
+                <div class="feature-icon" aria-hidden="true">🚨</div>
+                <h3>Anti-Raid Protection</h3>
+                <p>Detect sudden bursts of member joins, apply protective timeouts to eligible newcomers, and alert staff in a chosen channel.</p>
+                <p class="feature-commands">/antiraid enable · disable · clear · status</p>
+            </div>
+
+            <div class="feature-card">
+                <div class="feature-icon" aria-hidden="true">🤖</div>
+                <h3>MDZ AI</h3>
+                <p>Ask MDZ AI questions right inside Discord for help with everyday questions and Discord topics.</p>
+                <p class="feature-commands">/ai</p>
+            </div>
+
+            <div class="feature-card">
+                <div class="feature-icon" aria-hidden="true">📣</div>
+                <h3>Announcements</h3>
+                <p>Post an announcement embed to your chosen channel, with an optional role mention to reach the right members.</p>
+                <p class="feature-commands">/announce</p>
+            </div>
+
+            <div class="feature-card">
+                <div class="feature-icon" aria-hidden="true">📡</div>
+                <h3>Bot Status</h3>
+                <p>Check whether MDZ Utility is online with a quick slash command.</p>
+                <p class="feature-commands">/ping</p>
             </div>
 
         </div>
