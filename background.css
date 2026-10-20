@@ -42,3 +42,16 @@ input::placeholder, textarea::placeholder {
     color: #c4c9d4;
     opacity: 1;
 }
+
+/* Explicit foreground colors for headings and cards, independent of inheritance. */
+.hero h1,
+.hero h1 span,
+.section-title h2,
+.custom-section h2,
+.feature-card,
+.feature-card h3,
+.feature-card p,
+.page-header h1,
+.page-header h1 span {
+    color: #ffffff;
+}
